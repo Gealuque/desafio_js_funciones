@@ -26,13 +26,21 @@ ele.addEventListener('click', () =>{
 
 const ele = document.getElementById('ele1')
 
+let accionClick = Boolean
+accionClick = false
+
 const pintar = (elemento, color = 'green') => {
     elemento.style.backgroundColor = color
 };
 pintar(ele)
 
 ele.addEventListener('click', () => {
-    pintar(ele,'yellow')
+    if(!accionClick){
+        pintar(ele,'yellow')
+    }else{
+        pintar(ele,)
+    }
+    accionClick = !accionClick
 })
 
 
