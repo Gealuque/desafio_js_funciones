@@ -1,3 +1,4 @@
+//Parte Uno Ejercicio 3
 const div1 = document.getElementById('box1')
 const div2 = document.getElementById('box2')
 const div3 = document.getElementById('box3')
@@ -14,8 +15,8 @@ accionClick3 = false;
 accionClick4 = false;
 
 
-const CambiarColor = (caja, color) =>{ //Mi funcion cambiar el color a negro
-    caja.style.backgroundColor = color
+const CambiarColor = (caja, color1) =>{ //Mi funcion cambiar el color a negro
+    caja.style.backgroundColor = color1
 }
 
 //clicks en las cajitas div
@@ -56,7 +57,10 @@ div4.addEventListener('click', () => {
     accionClick4 = !accionClick4;
 })
 
+
 //Segunda parte 
+
+//Creando el div con js
 
 const div5 = document.createElement('div')
 div5.style.width = '200px';
@@ -66,8 +70,9 @@ div5.style.border = '1px solid black'
 
 contenedor.appendChild(div5)
 
-const NuevoColor = (elemento, color) =>{
-    elemento.style.backgroundColor = color
+
+const NuevoColor = (elemento, color2) =>{ //Función para cambiar el color por tecla
+    elemento.style.backgroundColor = color2
 }
 
 document.addEventListener('keydown', function(event){
@@ -80,4 +85,24 @@ document.addEventListener('keydown', function(event){
     }
 })
 
+//Tercera Parte 
+
+const NuevoDiv = (color3) =>{ //Función para crear el nuevo div
+    const div6 = document.createElement('div')
+    div6.style.width = '200px';
+    div6.style.height = '200px';
+    div6.style.backgroundColor = color3;
+    div6.style.border = '1px solid black'
+    contenedor2.appendChild(div6)
+}
+
+document.addEventListener('keydown', function(event){
+    if(event.key === 'q' || event.key === 'Q'){
+        NuevoDiv ('purple')
+    }else if (event.key === 'w' || event.key === 'W'){
+        NuevoDiv ('gray')
+    }else if(event.key === 'e' || event.key === 'E'){
+        NuevoDiv ('brown')
+    }
+})
 
