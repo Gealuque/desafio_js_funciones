@@ -75,18 +75,6 @@ const NuevoColor = (elemento, color2) =>{ //Función para cambiar el color por t
     elemento.style.backgroundColor = color2
 }
 
-document.addEventListener('keydown', function(event){
-    if(event.key === 'a' || event.key === 'A'){
-        NuevoColor (div5,'pink')
-    }else if (event.key === 's' || event.key === 'S'){
-        NuevoColor (div5, 'orange')
-    }else if(event.key === 'd' || event.key === 'D'){
-        NuevoColor (div5, '#00BFFF')
-    }
-})
-
-//Tercera Parte 
-
 const NuevoDiv = (color3) =>{ //Función para crear el nuevo div
     const div6 = document.createElement('div')
     div6.style.width = '200px';
@@ -97,7 +85,13 @@ const NuevoDiv = (color3) =>{ //Función para crear el nuevo div
 }
 
 document.addEventListener('keydown', function(event){
-    if(event.key === 'q' || event.key === 'Q'){
+    if(event.key === 'a' || event.key === 'A'){
+        NuevoColor (div5,'pink')
+    }else if (event.key === 's' || event.key === 'S'){
+        NuevoColor (div5, 'orange')
+    }else if(event.key === 'd' || event.key === 'D'){
+        NuevoColor (div5, '#00BFFF')
+    } if(event.key === 'q' || event.key === 'Q'){ //Tercera Parte
         NuevoDiv ('purple')
     }else if (event.key === 'w' || event.key === 'W'){
         NuevoDiv ('gray')
@@ -105,4 +99,5 @@ document.addEventListener('keydown', function(event){
         NuevoDiv ('brown')
     }
 })
+
 
