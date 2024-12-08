@@ -55,3 +55,29 @@ div4.addEventListener('click', () => {
     }
     accionClick4 = !accionClick4;
 })
+
+//Segunda parte 
+
+const div5 = document.createElement('div')
+div5.style.width = '200px';
+div5.style.height = '200px';
+div5.style.backgroundColor = 'white';
+div5.style.border = '1px solid black'
+
+contenedor.appendChild(div5)
+
+const NuevoColor = (elemento, color) =>{
+    elemento.style.backgroundColor = color
+}
+
+document.addEventListener('keydown', function(event){
+    if(event.key === 'a' || event.key === 'A'){
+        NuevoColor (div5,'pink')
+    }else if (event.key === 's' || event.key === 'S'){
+        NuevoColor (div5, 'orange')
+    }else if(event.key === 'd' || event.key === 'D'){
+        NuevoColor (div5, '#00BFFF')
+    }
+})
+
+
