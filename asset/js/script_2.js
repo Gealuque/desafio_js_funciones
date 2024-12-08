@@ -85,13 +85,13 @@ const NuevoDiv = (color3) =>{ //Función para crear el nuevo div
 }
 
 document.addEventListener('keydown', function(event){
-    if(event.key === 'a' || event.key === 'A'){
+    if(event.key === 'a' || event.key === 'A'){//Cambiar color Div
         NuevoColor (div5,'pink')
     }else if (event.key === 's' || event.key === 'S'){
         NuevoColor (div5, 'orange')
     }else if(event.key === 'd' || event.key === 'D'){
         NuevoColor (div5, '#00BFFF')
-    } if(event.key === 'q' || event.key === 'Q'){ //Tercera Parte
+    } if(event.key === 'q' || event.key === 'Q'){ //Crear Div
         NuevoDiv ('purple')
     }else if (event.key === 'w' || event.key === 'W'){
         NuevoDiv ('gray')
